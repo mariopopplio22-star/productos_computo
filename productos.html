@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles.css">
+  <title>Productos de Cómputo</title>
+</head>
+<body>
+<div id="titulo">
+  <h1>Productos de Cómputo</h1>
+  </div>
+
+  <div onclick="seleccionarProducto('Laptop Lenovo', 2500, 'laptop.png')">
+    <img src="laptop.png" alt="Laptop Lenovo" width="150">
+    <p>Laptop Lenovo - S/2500</p>
+  </div>
+
+  <div onclick="seleccionarProducto('Mouse Logitech', 80, 'mouse.jpg')">
+    <img src="mouse.jpg" alt="Mouse Logitech" width="150">
+    <p>Mouse Logitech - S/80</p>
+  </div>
+
+  <div onclick="seleccionarProducto('Monitor Samsung', 900, 'monitor.jpg')">
+    <img src="monitor.jpg" alt="Monitor Samsung" width="150">
+    <p>Monitor Samsung - S/900</p>
+  </div>
+
+  <div onclick="seleccionarProducto('Teclado Redragon_K552RGB', 189, 'teclado.jpg')">
+    <img src="teclado.jpg" alt="Teclado Redragon_K552RGB" width="150">
+    <p>Teclado Redragon K552RGB - S/189</p>
+  </div>
+
+  <div onclick="seleccionarProducto('Impresora HP Smart Tank-720 dúplex', 749, 'impresora.jpg')">
+    <img src="impresora.jpg" alt="Impresora HP Smart Tank-720 dúplex" width="150">
+    <p>Impresora HP Smart Tank-720 dúplex - S/749</p>
+  </div>
+
+  <div onclick="seleccionarProducto('Memoria USB Kingston Exodia-128-GB', 32, 'usb.png')">
+    <img src="usb.png" alt="Memoria USB Kingston Exodia-128-GB" width="150">
+    <p>Memoria USB Kingston Exodia-128-GB - S/32</p>
+  </div>
+
+  <div onclick="seleccionarProducto('Disco duro externo Toshiba Canvio Basics-2TB', 305, 'disco_duro_externo.jpg')">
+    <img src="disco_duro_externo.jpg" alt="Disco duro externo Toshiba Canvio Basics-2TB" width="150">
+    <p>Disco duro externo Toshiba Canvio Basics-2TB - S/305</p>
+  </div>
+
+  <div onclick="seleccionarProducto('Router ASUS-RT-AX5400', 150, 'Router_Wi-Fi.png')">
+    <img src="Router_Wi-Fi.png" alt="Router ASUS-RT-AX5400" width="150">
+    <p>Disco duro externo Toshiba Canvio Basics-2TB - S/150</p>
+  </div>
+
+  <div onclick="seleccionarProducto('Tarjeta gráfica NVIDIA GeForce-RTX-3050-6-8-GB', 859, 'Tarjeta_gráfica_(GPU).jpg')">
+    <img src="Tarjeta_gráfica_(GPU).jpg" alt="Tarjeta gráfica NVIDIA GeForce-RTX-3050-6-8-GB" width="150">
+    <p>Disco duro externo Toshiba Canvio Basics-2TB - S/859</p>
+  </div>
+
+  <div onclick="seleccionarProducto('Fuente de poder gamer 500W 80 Plus Bronze', 859, 'Fuentedepoder_(PSU).jpg')">
+    <img src="Fuentedepoder_(PSU).jpg" alt="Fuente de poder gamer 500W 80 Plus Bronze" width="150">
+    <p>Disco duro externo Toshiba Canvio Basics-2TB - S/859</p>
+  </div>
+
+  
+
+  <script>
+    function seleccionarProducto(nombre, precio, imagen) {
+      localStorage.setItem('producto', JSON.stringify({ nombre, precio, imagen }));
+      window.location.href = 'compra.html';
+    }
+  </script>
+</body>
+</html>

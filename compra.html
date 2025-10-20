@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles2.css">
+  <title>Compra</title>
+</head>
+<body>
+  <h1>Compra del producto</h1>
+  <div id="detalle"></div>
+
+  <label for="cantidad">Cantidad:</label>
+  <select id="cantidad">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+  </select>
+
+  <button onclick="comprar()">Comprar</button>
+
+  <script>
+    const producto = JSON.parse(localStorage.getItem('producto'));
+    document.getElementById('detalle').innerHTML = `
+      <img src="${producto.imagen}" width="150">
+      <p>Nombre: ${producto.nombre}</p>
+      <p>Precio: S/${producto.precio}</p>
+    `;
+
+    function comprar() {
+      const cantidad = parseInt(document.getElementById('cantidad').value);
+      localStorage.setItem('compra', JSON.stringify({ ...producto, cantidad }));
+      window.location.href = 'boleta.html';
+    }
+  </script>
+</body>
+</html>

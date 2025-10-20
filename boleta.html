@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles2.css">
+  <title>Boleta</title>
+</head>
+<body>
+  <h1>Boleta de Compra</h1>
+  <div id="boleta"></div>
+  <button onclick="cerrarSesion()">Cerrar Sesión</button>
+
+  <script>
+    const compra = JSON.parse(localStorage.getItem('compra'));
+    const total = compra.precio * compra.cantidad;
+
+    document.getElementById('boleta').innerHTML = `
+      <img src="${compra.imagen}" width="150">
+      <p>Producto: ${compra.nombre}</p>
+      <p>Precio unitario: S/${compra.precio}</p>
+      <p>Cantidad: ${compra.cantidad}</p>
+      <p>Total a pagar: S/${total}</p>
+    `;
+
+    function cerrarSesion() {
+      localStorage.clear();
+      window.location.href = 'login.html';
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,108 @@
+/* Reset básico */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Fondo general y tipografía */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f2f5;
+  color: #333;
+  padding: 30px;
+  text-align: center;
+}
+
+/* Títulos */
+h1 {
+  font-size: 28px;
+  margin-bottom: 25px;
+  color: #0078D7;
+}
+
+/* Contenedor de productos o detalles */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Tarjeta de producto o detalle */
+.card {
+  background-color: #fff;
+  border-radius: 10px;
+  width: 280px;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.card p {
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+/* Etiquetas y campos */
+label {
+  display: block;
+  margin-top: 20px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+select, input[type="text"], input[type="password"] {
+  margin-top: 10px;
+  padding: 10px;
+  width: 80%;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Botones */
+button {
+  margin-top: 25px;
+  padding: 12px 25px;
+  font-size: 16px;
+  background-color: #0078D7;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #005fa3;
+}
+
+/* Formulario login */
+form {
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  display: inline-block;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  text-align: left;
+  width: 300px;
+  margin: auto;
+}
+
+form label {
+  margin-top: 15px;
+}
+
+form button {
+  width: 100%;
+}
